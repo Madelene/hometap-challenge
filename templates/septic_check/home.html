@@ -1,0 +1,15 @@
+<!-- home.html -->
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-3 col-auto">
+  <div class="card">
+    <div class="card-header">
+      Sewage Info
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ sewage_system }}</li>
+    </ul>
+  </div>
+</div>
+{% endblock content %}
