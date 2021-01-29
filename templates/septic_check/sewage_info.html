@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block container %}
+  <div class="card col-md-12 col-auto" style="padding: 20px 10px;">
+    <div class="card-header ">
+      <b>Sewage Info</b>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ sewage_system }}</li>
+    </ul>
+  </div>
+{% endblock %}

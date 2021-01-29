@@ -1,15 +1,18 @@
-<!-- home.html -->
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
 
-{% block content %}
-<div class="col-md-3 col-auto">
-  <div class="card">
-    <div class="card-header">
-      Sewage Info
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">{{ sewage_system }}</li>
-    </ul>
-  </div>
+{% block container %}
+<div class="container mt-5">
+    <form class="form-signin" method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+      <h2 class="h3 mb-3 font-weight-normal">Does your property have a septic system?</h2>
+      <div class="form-group">
+        {{ form.as_table }}
+      </div>
+        <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+    </form>
 </div>
-{% endblock content %}
+{% endblock %}
+
+
