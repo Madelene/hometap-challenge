@@ -17,8 +17,8 @@ def home(request):
         form = PropertyForm(request.POST)
 
         if form.is_valid():
-            address = request.POST.get('address')
-            zipcode = request.POST.get('zipcode')
+            address = form.cleaned_data['address']
+            zipcode = form.cleaned_data['zipcode']
 
             params['address'] = address
             params['zipcode'] = zipcode
@@ -30,14 +30,13 @@ def home(request):
         form = PropertyForm()
 
     context = {
-        'sewage_system': sewage_info,
         'form': form,
     }
     return render(request, 'septic_check/home.html', context)
 
 
 def sewage_info(request):
-    # We would actually get the sewage_info from the response_json when making a request to the API
+    # We would actually get the sewage_info from the response_json (to be passed in) when making a request to the API
     sewage_info = PROPERTIES.get('property/details', {}).get('result', {}).get('property', {}).get('sewer', '')
 
     context = { 'sewage_system': sewage_info }
