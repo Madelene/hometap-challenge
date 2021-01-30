@@ -1,13 +1,16 @@
 # Septic-Check
-This example web app is meant to return sewage information on a property. When actually calling the API, the address and zipcode entered by the user would be passed in as parameters to the request.
+This example web app is meant to return sewage information on a property. When calling the actual API, the address and zipcode entered by the user would be passed in as parameters to the request.
 The corresponding response would return the payload that contains information about the sewage system on the property.
 The `sewer` field returns one of these options: `Municipal, None, Storm, Septic, Yes`.
 For our purposes, we are interested to see if the property uses Septic.
 
-#### Set up and Running the Project Locally
+#### Details
 
 - Python version 3.8.2
 - Django version 3.1.5
+
+
+#### Set up and Running the Project Locally
 
 - Clone the files from GitHub, open the terminal, and cd into the project.
 
