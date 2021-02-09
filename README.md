@@ -27,8 +27,7 @@ For our purposes, we are interested to see if the property uses Septic.
 
 #### Run tests
 
-In the home directory, run `export DJANGO_SETTINGS_MODULE=properties.settings`
-Then, run `python -m pytest tests/`
+In the home directory, run either `pytest` or `python -m pytest tests/`
 
 You should be able to view the output:
 
