@@ -1,8 +1,8 @@
-from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.home, name='home'),
-    url(r'^sewage_info', views.sewage_info, name='sewage-info')
+    path('', views.home, name='home'),
+    path('sewage_info/', views.sewage_info, name='sewage-info')
 ]
