@@ -1,6 +1,5 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
-
 from properties.property_data import PROPERTIES
 
 from .forms import PropertyForm
