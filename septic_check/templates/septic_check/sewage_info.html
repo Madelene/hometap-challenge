@@ -10,5 +10,10 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">{{ sewage_system }}</li>
     </ul>
+    {% if sewage_system|lower == "septic" %}
+        <div>Let me ask you about your septic system?</div>
+        {% else %}
+        <div></div>
+    {% endif %}
   </div>
 {% endblock %}
