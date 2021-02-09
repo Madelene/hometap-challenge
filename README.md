@@ -27,21 +27,36 @@ For our purposes, we are interested to see if the property uses Septic.
 
 #### Run tests
 
-In the home directory, run either `pytest` or `python -m pytest tests/`
+In the home directory, run `pytest --cov`
 
-You should be able to view the output:
+You should be able to view the coverage:
 
 ```
-================================================================ test session starts ================================================================
-platform darwin -- Python 3.8.2, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
-django: settings: properties.settings (from env)
-rootdir: /Users/madelenecampos/Desktop/hometap-challenge, configfile: pytest.ini
-plugins: cov-2.11.1, django-4.1.0, pythonpath-0.7.3
 collected 7 items
 
 tests/test_views.py .                                                                                                                         [ 14%]
 tests/test_property_form.py .....                                                                                                             [ 85%]
 tests/test_urls.py .                                                                                                                          [100%]
 
-================================================================= 7 passed in 0.26s =================================================================
+---------- coverage: platform darwin, python 3.8.2-final-0 -----------
+Name                                  Stmts   Miss  Cover
+---------------------------------------------------------
+properties/__init__.py                    0      0   100%
+properties/property_data.py               1      0   100%
+properties/settings.py                   19      0   100%
+properties/urls.py                        3      0   100%
+septic_check/__init__.py                  0      0   100%
+septic_check/admin.py                     1      0   100%
+septic_check/apps.py                      3      0   100%
+septic_check/forms.py                     4      0   100%
+septic_check/migrations/__init__.py       0      0   100%
+septic_check/models.py                    1      0   100%
+septic_check/urls.py                      3      0   100%
+septic_check/views.py                    21     12    43%
+tests/__init__.py                         0      0   100%
+tests/test_property_form.py               6      0   100%
+tests/test_urls.py                        7      0   100%
+tests/test_views.py                       7      0   100%
+---------------------------------------------------------
+TOTAL                                    76     12    84%
 ```
